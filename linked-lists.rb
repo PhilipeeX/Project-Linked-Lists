@@ -38,6 +38,20 @@ class LinkedList
         end
       end
     
+    def append(node)
+        if @head.nil?
+            @head = node
+            @tail = node
+        else
+            @tail.next = node
+            @tail = node
+        end
+    end
+
+    def self.size
+        self
+    end
+
 end
 
 class Node
