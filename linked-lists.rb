@@ -19,7 +19,7 @@
 # #insert_at(value, index) that inserts a new node with the provided value at the given index.
 # #remove_at(index) that removes the node at the given index.
 # Extra Credit Tip: When you insert or remove a node, consider how it will affect the existing nodes. Some of the nodes will need their #next_node link updated.
-
+require 'pry-byebug'
 class LinkedList
     attr_accessor :name
 
@@ -48,8 +48,39 @@ class LinkedList
         end
     end
 
-    def self.size
-        self
+    def size
+      current = @head
+      count = 0
+
+      until current.nil?
+        count += 1
+        current = current.next
+      end
+
+      count
+    end
+
+    def head
+      @head
+    end
+
+    def tail
+      @tail
+    end
+
+    def at(index)
+      binding.pry
+      array = []
+      if self.size - 1 < index
+        return false
+      else
+        current = @head
+        until array[index].nil? != true
+          array << current
+          current = current.next
+        end
+        array[index]
+      end
     end
 
 end
