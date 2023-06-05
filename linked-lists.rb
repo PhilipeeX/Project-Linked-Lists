@@ -69,20 +69,38 @@ class LinkedList
     end
 
     def at(index)
-      binding.pry
       array = []
       if self.size - 1 < index
         return false
       else
+        i = 0
         current = @head
-        until array[index].nil? != true
+        while i <= index 
           array << current
           current = current.next
+          i += 1
         end
         array[index]
       end
     end
 
+    def pop
+      puts "removendo #{self.at(self.size - 1).data}..."
+      # binding.pry
+      return false if @tail.nil?
+      
+      if self.size == 1
+        @head = nil
+        @tail = nil
+      elsif self.size == 2
+        current = @head
+        current.next = nil
+        @tail = nil
+      else
+        self.at(self.size - 2).next = nil
+        @tail = nil
+      end
+    end
 end
 
 class Node
