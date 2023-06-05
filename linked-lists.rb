@@ -116,6 +116,34 @@ class LinkedList
       end
       current.data == current_node ? true : false
     end
+
+    def find(value)
+      current_node = value
+      i = 0
+      current = @head
+      while i < self.size
+        if current == current_node
+          return i
+        else
+          current = current.next
+          i += 1
+        end
+      end
+    end
+
+    def to_s
+      current = @head
+      i = 0
+      string = []
+      while i < self.size
+        string << current.data
+        current = current.next
+        i += 1
+      end
+      print '( '
+      print string.join(' ) -> ( ')
+      print ' )'
+    end
 end
 
 class Node
