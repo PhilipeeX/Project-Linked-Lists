@@ -86,9 +86,7 @@ class LinkedList
 
     def pop
       puts "removendo #{self.at(self.size - 1).data}..."
-      # binding.pry
       return false if @tail.nil?
-      
       if self.size == 1
         @head = nil
         @tail = nil
@@ -100,6 +98,23 @@ class LinkedList
         self.at(self.size - 2).next = nil
         @tail = nil
       end
+    end
+
+    def contains?(value)
+      if value.data
+        current_node = value.data
+      else
+        false
+      end
+      # binding.pry
+      current = @head
+      while current != self.at(self.size - 1)
+        if current.data == current_node
+          return true
+        end
+        current = current.next
+      end
+      current.data == current_node ? true : false
     end
 end
 
