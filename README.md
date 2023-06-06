@@ -50,40 +50,40 @@ Métodos disponíveis na classe `Node`:
 ## Uso
 
 Aqui está um exemplo de uso da lista encadeada:
-### Cria uma nova lista encadeada
-list = LinkedList.new
-
-### Adiciona elementos à lista
-list.append(node1)
-list.append(node2)
-list.prepend(node5)
-
-### Obtém o tamanho da lista
-size = list.size
-puts "Tamanho da lista: #{lista.size}" # Saída: Tamanho da lista: 3
-
-### Obtém o primeiro nó da lista
-head = list.head
-puts "Primeiro nó: #{head.value}" # Saída: Primeiro nó: 5
-
-### Obtém o último nó da lista
-tail = list.tail
-puts "Último nó: #{tail.value}" # Saída: Último nó: 20
-
-### Obtém o nó no índice 1
-node = list.at(1)
-puts "Nó no índice 1: #{node.value}" # Saída: Nó no índice 1: 10
-
-### Remove o último elemento da lista
-list.pop
-
-### Verifica se a lista contém o valor 10
-contains_10 = list.contains?(10)
-puts "Contém 10? #{contains_10}" # Saída: Contém 10? false
-
-### Encontra o índice do valor 20
-index_20 = list.find(20)
-puts "Índice do valor 20: #{index_20}" # Saída: Índice do valor 20: 1
-
-### Imprime a representação da lista encadeada
-puts list.to_s # Saída: ( 5 ) -> ( 10 ) -> nil
+     # Cria uma nova lista encadeada
+    list = LinkedList.new
+    
+    # Adiciona elementos à lista
+    list.append(node1)
+    list.append(node2)
+    list.prepend(node2)
+    
+    # Obtém o tamanho da lista
+    size = list.size
+    puts "Tamanho da lista: #{lista.size}" # Saída: Tamanho da lista: 3
+    
+    # Obtém o primeiro nó da lista
+    head = list.head
+    puts "Primeiro nó: #{head.value}" # Saída: Primeiro nó: 5
+    
+    # Obtém o último nó da lista
+    tail = list.tail
+    puts "Último nó: #{tail.value}" # Saída: Último nó: 20
+    
+    # Obtém o nó no índice 1
+    node = list.at(1)
+    puts "Nó no índice 1: #{node.value}" # Saída: Nó no índice 1: 10
+    
+    # Remove o último elemento da lista
+    list.pop
+    
+    # Verifica se a lista contém o valor 10
+    contains_10 = list.contains?(10)
+    puts "Contém 10? #{contains_10}" # Saída: Contém 10? false
+    
+    # Encontra o índice do valor 20
+    index_20 = list.find(20)
+    puts "Índice do valor 20: #{index_20}" # Saída: Índice do valor 20: 1
+    
+    # Imprime a representação da lista encadeada
+    puts list.to_s # Saída: ( 5 ) -> ( 10 ) -> nil
