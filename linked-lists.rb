@@ -154,4 +154,8 @@ class Node
       @data = data
     end
 
+    def value
+      @data
+    end
+
 end
